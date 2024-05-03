@@ -1,0 +1,30 @@
+[package]
+name = "kagura"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "lib/ikuai",
+    "lib/cloudflare-ddns"
+]
+
+[dependencies]
+ikuai = { path = "lib/ikuai" }
+cloudflare-ddns = { path = "lib/cloudflare-ddns" }
+
+config = "0.13.3"
+dotenv = "0.15.0"
+
+reqwest = { version = "0.11.22", features = ["json", "blocking"] }
+
+serde = "1.0.189"
+serde_json = "1.0.107"
+
+tokio = { version = "1.33.0", features = ["full"] }
+tokio_schedule = "0.3.1"
+
+teloxide = { version = "0.12.2", features = ["full"] }
+chrono = "0.4.38"
+env_logger = "0.11.3"
+log = "0.4.21"
